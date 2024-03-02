@@ -1,0 +1,15 @@
+/* START OF FUNKY TEXT */
+.funky-text{
+    text-align: center;
+    margin: auto;
+
+    font-family: "Istok Web"; 
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 100px;
+    letter-spacing: -0.006em;
+
+    color: dodgerblue;
+}
+/* END OF FUNKY TEXT */
