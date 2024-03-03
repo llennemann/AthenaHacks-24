@@ -120,6 +120,24 @@
     color: #000000;
 }
 
+/* Month Text */
+.years-left{
+    position: absolute;
+    width: 921px;
+    height: 59px;
+    left: 282px;
+    top: 710px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 56px;
+    text-align: center;
+    
+    color: #000000;
+}
+
 /* Submit Button */
 .submit-button{
     position: absolute;
