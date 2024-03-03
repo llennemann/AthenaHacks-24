@@ -1,7 +1,20 @@
 <HTML>
-    <h1>this is your</h1>
-    <h1>finance buddy</h1>
-    <button>try me!</button>
-    <button>Finance Basics</button>
-    <button>About Me</button>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/landingPage.css') }}">
+
+    <link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'></link>
+    <link href='https://fonts.googleapis.com/css?family=Cardo' rel='stylesheet'></link>
+    <div class="landing-page-background-rectangle"></div>
+    <div class="small-title-text">this is your</div>
+    <div class="big-title-text">finance buddy</div>
+    <form action="/tryMe" method="get">
+        <button class="try-me-button">✨try me!✨</button>
+    </form>
+    <form action="/FinBasics" method="get">
+        <button class="finance-basics-button">Finance Basics</button>
+    </form>
+    <form action="/aboutMe" method="get">
+        <button class="about-me-button">About Me</button>
+    </form>
+    <div class="blue-circle"></div>
+    <img class="girl" src="{{ url_for('static',filename='images/DALL_E_2024-03-02_16.30.png') }}"/>
 </HTML>

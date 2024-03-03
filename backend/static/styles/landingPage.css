@@ -1,0 +1,142 @@
+/* Landing Page Background Rectangle */
+.landing-page-background-rectangle{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+
+    background: #FCA2BC;
+}
+
+/* SmallTitle Text */
+.small-title-text{
+    position: absolute;
+    width: 991px;
+    height: 234px;
+    left: 141px;
+    top: 118px;
+
+    font-family: Cardo;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 122px;
+
+    color: #000000;
+}
+
+/* Big Title Text */
+.big-title-text{
+    position: absolute;
+    width: 991px;
+    height: 234px;
+    left: 141px;
+    top: 218px;
+
+    font-family: Calistoga;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 114px;
+    line-height: 122px;
+
+    color: #1C6D9A;
+}
+
+/* Try Me Button */
+.try-me-button{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 800px;
+    height: 182px;
+    left: 115px;
+    top: 360px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 90px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 91px;
+    line-height: 118px;
+    
+    color: #000000; 
+}
+
+/* Finance Basics Button */
+.finance-basics-button{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 390px;
+    height: 111px;
+    left: 115px;
+    top: 570px;
+    
+    background: #F7CDD9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 90px;
+
+    /* position: absolute;
+    width: 268px;
+    height: 52px;
+    left: 202px;
+    top: 690px; */
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    /* identical to box height */
+    
+    color: #000000;
+}
+
+/* About Me Button */
+.about-me-button{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 381px;
+    height: 111px;
+    left: 530px;
+    top: 570px;
+    
+    background: #F7CDD9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 90px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    /* identical to box height */
+    
+    color: #000000;
+}
+
+/* Blue Circle */
+.blue-circle{
+    position: absolute;
+    width: 245px;
+    height: 245px;
+    left: 1066px;
+    top: 144px;
+    border-radius: 50%;
+    
+    background: #1992D6;
+}
+
+/* Girl */
+.girl{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 860px;
+    top: 280px;
+}
