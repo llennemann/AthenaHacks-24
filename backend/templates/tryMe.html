@@ -1,14 +1,31 @@
 <HTML>
-    <h1>Try Me</h1>
-    <form action="/buy" method="post">
-        <p>Choose one of the following numbers:</p>
-        <input type="radio" id="num1" name="number" value="1"/>
-        <label for="num1">1</label>
-        <input type="radio" id="num10" name="number" value="10"/>
-        <label for="num10">10</label>
-        <input type="radio" id="num30" name="number" value="30"/>
-        <label for="num30">30</label>
-        <input type="submit" value="Submit"/>
-    </form>
-</HTML>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/tryMe.css') }}">
 
+<link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'>
+</link>
+<link href='https://fonts.googleapis.com/css?family=Cardo' rel='stylesheet'>
+</link>
+
+<div class="pinkrect"></div>
+<div class="big-text-title">you have $10,000. let’s start investing!</div>
+
+<div class="small-text-title">when do you want to take out your money? (when will the game end?)</div>
+
+    <form action="/buy" method="post">
+        <p></p>
+        <input type="radio" id="num1" name="number" value="1" />
+        <label for="num1" class="radio-label">1 year</label>
+
+        <input type="radio" id="num10" name="number" value="10" />
+        <label for="num10" class="radio-label">10 years</label>
+
+        <input type="radio" id="num30" name="number" value="30" />
+        <label for="num30" class="radio-label">30 years</label>
+
+        <input type="submit" value="Submit" class="submit-button"/>
+
+    </form>
+
+<div class="logo"></div>
+
+</HTML>
