@@ -1,4 +1,10 @@
 <HTML>
+
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/sell-exchange.css') }}">
+
+    <link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'></link>
+    <link href='https://fonts.googleapis.com/css?family=Cardo' rel='stylesheet'></link>
+
     <head>
         <script type="text/javascript">
             function calculate() {
@@ -16,9 +22,24 @@
         </script>
     </head>
     <body>
-        <p>{{ stock_name }}</p>
-        <p id="price">{{ price_now }}</p>
-        <p id="shares">{{ num_shares }} </p>
+        <div class="pink-rectange"></div>
+
+        <div class = "line"></div>
+        <div class="name">name</div>
+        <div class="num-shares">number of shares</div>
+        <div class="current-price">current price</div>
+
+        <div class="speech-bubble"></div>
+        <div class="speech-text">would you like to sell your shares of this stock?</div>
+
+        <div class="big-title">selling stocks</div>
+
+        <img class="sell-exchange-page-logo" src="{{ url_for('static',filename='images/athenahackslogo2.png') }}"/>
+        <img class="sell-exchange-page-girl" src="{{ url_for('static',filename='images/DALL_E_2024-03-02_16.30.png') }}"/>
+
+        <p class="get-name">{{ stock_name }}</p>
+        <p id="shares" class="get-num-shares">{{ num_shares }} </p>
+        <p id="price" class="get-current-price">{{ price_now }}</p>
         <!--<p id="amount">Amount gained: </p> -->
         <form action="/sell-update" method="get">
             <input type="hidden" name="stock_name" value="{{ stock_name }}">
