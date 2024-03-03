@@ -157,7 +157,7 @@
 }
 
 /* Ellipse 6 */
-
+.ellipse-6{
 position: absolute;
 width: 342px;
 height: 246px;
@@ -165,10 +165,11 @@ left: 279px;
 top: 120px;
 
 background: #FFFFFF;
+}
 
 
 /* hi, I’m Dr. Stox! */
-
+.doctor{
 position: absolute;
 width: 268px;
 height: 116px;
@@ -182,6 +183,7 @@ font-size: 48px;
 line-height: 62px;
 
 color: #000000;
+}
 
 
 
