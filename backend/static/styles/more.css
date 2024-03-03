@@ -163,3 +163,21 @@
     left: 1300px;
     top: 20px;
 }
+
+/* Amount */
+.amount{
+    position: absolute;
+    width: 242px;
+    height: 236px;
+    left: 1230px;
+    top: 140px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    
+    color: #000000;
+}
