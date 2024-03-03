@@ -19,7 +19,7 @@ def tryMe():
 @app.route('/aboutMe')
 def aboutMe():
     return render_template("aboutMe.html")
-
+    
 @app.route('/financeBasics')
 def financeBasics():
     return render_template("financeBasics.html")
@@ -43,7 +43,7 @@ def sellAndUpdate():
     
     # update myData
     # 
-    return render_template("more.html")
+    return render_template("more.html") 
 
 def getTableData(currentDay):
     industries, stocks = all_data()
@@ -70,6 +70,10 @@ def sell():
 @app.route('/portfolio')
 def portfolio():
     return render_template("portfolio.html")
+
+@app.route('/days')
+def days():
+    return render_template("days.html")
 
 @app.route('/exchange', methods=['GET'])
 def exchange():
