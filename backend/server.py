@@ -19,6 +19,10 @@ def tryMe():
 @app.route('/aboutMe')
 def aboutMe():
     return render_template("aboutMe.html")
+
+@app.route('/financeBasics')
+def financeBasics():
+    return render_template("financeBasics.html")
     
 # cancel buy/sell transaction
 @app.route('/cancel')
