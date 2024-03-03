@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/exchange.css') }}">
+
+<link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'></link>
+<link href='https://fonts.googleapis.com/css?family=Cardo' rel='stylesheet'></link>
+
+
 <head>
     <script type="text/javascript">
         function calculate() {
@@ -7,7 +13,7 @@
             var shares = parseFloat(document.getElementById('shares').value);
             var amount = shares * price; // Calculate total amount
             if (!isNaN(amount)) { // Check if amount is a number
-                document.getElementById('amount').textContent = 'Amount invested: ' + amount.toFixed(2); // Update text with calculated amount
+                document.getElementById('amount').textContent = 'Amount invested: $' + amount.toFixed(2); // Update text with calculated amount
             }
         }
 
@@ -32,17 +38,33 @@
     </script>
 </head>
 <body>
-    <p>{{ stock_name }}</p>
-    <p id="price">{{ price }}</p> <!-- Price of one share -->
-    <input type="number" id="shares" oninput="calculate()" min="0"/> <!-- Input for number of shares -->
-    <p id="amount">Amount invested:</p> <!-- Display total amount -->
+    <div class="pink-rectange"></div>
+    <div class = "line"></div>
+    <div class="name">name</div>
+    <div class="current-price">current price</div>
+    <div class="num-of-shares">Number of shares:</div>
+
+    <div class="speech-bubble"></div>
+    <div class="speech-text">how much of this stock would you like to exchange? </div>
+
+    <div class="big-title">buying stocks</div>
+
+    <img class="exchange-page-logo" src="{{ url_for('static',filename='images/athenahackslogo2.png') }}"/>
+    <img class="exchange-page-girl" src="{{ url_for('static',filename='images/DALL_E_2024-03-02_16.30.png') }}"/>
+
+    <p class="get-name">{{ stock_name }}</p>
+    <p id="price" class="get-current-price">{{ price }}</p> <!-- Price of one share -->
+    <input type="number" id="shares" oninput="calculate()" min="0" class="amount-input-box"/> <!-- Input for number of shares -->
+    <p id="amount" class="amount-to-invest">Amount invested:</p> <!-- Display total amount -->
     <form id="update_form" action="/buy-update" method="get">
         <input type="hidden" name="stock_name" value="{{ stock_name }}">
         <input type="hidden" name="price" value="{{ price }}">
         <input type="hidden" id="num_shares" name="num_shares">
         <button class="buy-button" onclick="submitForm()">Buy</button>
     </form>
-    <button class="cancel" onclick="goBack()">CANCEL</button>
+    <button class="cancel-button" onclick="goBack()">CANCEL</button>
+
+
 </body>
 </html>
 

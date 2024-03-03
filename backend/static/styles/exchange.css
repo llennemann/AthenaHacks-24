@@ -1,0 +1,270 @@
+/* Rectangle 1 */
+.pink-rectange {
+position: fixed;
+width: 100%;
+height: 100%;
+left: 0px;
+top: 0px;
+
+background: #F7CDD9;
+}
+
+/* buying stocks */
+.big-title{
+    position: absolute;
+    width: 749px;
+    height: 131px;
+    left: 396px;
+    top: 98px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 130px;
+    text-align: center;
+    
+    color: #2D7D48;
+}
+
+/* name */
+.name {
+position: absolute;
+width: 163px;
+height: 74px;
+left: 152px;
+top: 270px;
+
+font-family: 'Calistoga';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 62px;
+text-align: center;
+
+color: #000000;
+}
+
+
+/* current price */
+.current-price {
+position: absolute;
+width: 294px;
+height: 61px;
+left: 1029px;
+top: 264px;
+
+font-family: 'Calistoga';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 62px;
+text-align: center;
+
+color: #000000;
+}
+
+
+
+/* Number of shares */
+.num-of-shares{
+position: absolute;
+width: 410px;
+height: 53px;
+left: 945px;
+top: 497px;
+
+font-family: 'Cardo';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 65px;
+text-align: right;
+
+color: #000000;
+}
+
+
+/* Amount to invest: */
+.amount-to-invest{
+position: absolute;
+width: 470px;
+height: 46px;
+left: 987px;
+top: 580px;
+
+font-family: 'Cardo';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 65px;
+
+color: #000000;
+}
+
+
+/* Amazon */
+.get-name {
+position: absolute;
+height: 52px;
+left: 165px;
+top: 335px;
+
+font-family: 'Calistoga';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 52px;
+/* identical to box height */
+
+color: #000000;
+}
+
+
+/* $1 */
+.get-current-price{
+position: absolute;
+width: 71px;
+height: 51px;
+left: 1223px;
+top: 335px;
+
+font-family: 'Calistoga';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 52px;
+text-align: right;
+
+color: #000000;
+}
+
+/* Rectangle 15 */
+.amount-input-box{
+    box-sizing: border-box;
+    
+    position: absolute;
+    width: 271px;
+    left: 979px;
+    top: 560px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 90px;
+    
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 65px;
+}   
+
+/* Ellipse 6 */
+.speech-bubble {
+    position: absolute;
+    width: 512px;
+    height: 322px;
+    left: 315px;
+    top: 478px;
+    border-radius: 50%;
+
+    background: #FFFFFF;
+}
+
+/* how much of this stock would you like to exchange? */
+.speech-text {
+    position: absolute;
+    width: 411px;
+    height: 101px;
+    left: 371px;
+    top: 559px;
+
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 56px;
+    text-align: center;
+
+    color: #000000;
+}
+
+
+/* Line 1 */
+.line {
+    position: absolute;
+    width: 1153px;
+    height: 0px;
+    left: 165px;
+    top: 344px;
+
+    border: 1px solid #000000;
+}
+
+
+
+/* Rectangle 11 */
+.buy-button{
+    box-sizing: border-box;
+    
+    position: absolute;
+    width: 214px;
+    height: 127px;
+    left: calc(50% - 214px/2 + 313px);
+    top: calc(50% - 127px/2 + 387.5px);
+    
+    background: #1992D6;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 90px;
+    border: none;
+    
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 65px;
+}
+    
+    /* Rectangle 14 */
+    .cancel-button{
+    box-sizing: border-box;
+    
+    position: absolute;
+    width: 240px;
+    height: 125px;
+    left: calc(50% - 240px/2 + 566px);
+    top: calc(50% - 125px/2 + 388.5px);
+    
+    background: #EEA7A7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 90px;
+    
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 65px;
+    border: none;
+}
+    
+
+/* dr stox image */
+.exchange-page-girl {
+    position: absolute;
+    height: 440px;
+    left: 36px;
+    top: 536px;
+
+    background: url(DALL_E_2024-03-02_16.30.png);
+}
+
+/* landing page logo */
+.exchange-page-logo {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 1275px;
+    top: 50px;
+
+    background: url(athenahackslogo2.png);
+}
