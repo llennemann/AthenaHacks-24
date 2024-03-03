@@ -1,0 +1,31 @@
+<HTML>
+    <head>
+        <script type="text/javascript">
+            function calculate() {
+                var price = parseFloat(document.getElementById('price').textContent);
+                var shares = parseFloat(document.getElementById('shares').value);
+                var amount = shares * price; // Calculate total amount
+                if (!isNaN(amount)) { // Check if amount is a number
+                    document.getElementById('amount').textContent = 'Amount gained: ' + amount.toFixed(2); // Update text with calculated amount
+                }
+            }
+    
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </head>
+    <body>
+        <p>{{ stock_name }}</p>
+        <p id="price">{{ price_now }}</p>
+        <p id="shares">{{ num_shares }} </p>
+        <p id="amount">Amount gained: </p>
+        <form action="/sell-update" method="get">
+            <input type="hidden" name="stock_name" value="{{ stock_name }}">
+            <input type="hidden" name="price_now" value="{{ price_now }}">
+            <input type="hidden" name="num_shares" value="{{ num_shares }}">
+            <button class="buy-button">Buy</button>
+        </form>
+        <button class="cancel-button" onclick="goBack()">Cancel</button>
+    </body>
+</HTML>

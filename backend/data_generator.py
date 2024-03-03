@@ -1,6 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# store my stocks. format: stock_name : [bought date, sold date, # shares]
+# sold date will be -1 if not sold yet
+my_data = {}
+
 def all_data(): #time is in dayas and stock_names is a list of strings
     stocks = { 
         "BluePeak Energy": "Renewable Energy",
@@ -45,3 +49,13 @@ def portfolio_data (time_bought, time_sold, stock_names):
     for i in stock_names:
         my_data[i] = dict_stocks[i][time_bought:time_sold]
     return my_data
+
+def getMyData():
+    return my_data
+    
+
+def buyStockDataUpdate(stock_name, curr_day, num_shares):
+    my_data[stock_name] = [curr_day, -1, num_shares]
+
+def sellStockDataUpdate(stock_name, curr_day):
+    my_data[stock_name][1] = curr_day # update sell date to current day

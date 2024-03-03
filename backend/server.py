@@ -1,12 +1,18 @@
 import time
-from flask import Flask, request, render_template
-from data_generator import all_data
+from flask import Flask, request, render_template, redirect, session
+from flask_session import Session
+from data_generator import all_data, buyStockDataUpdate, getMyData
 
 
 app = Flask(__name__)
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
+
 total_time = 0 #in days
 curr_day = 0
-amount = 10000
+
+
 
 @app.route('/')
 def home():
@@ -29,12 +35,24 @@ def financeBasics():
 def cancel():
      return render_template("buy.html", total_time = total_time, stock_data=getTableData(curr_day))
 
-@app.route('/buy-update')
+@app.route('/buy-update', methods=['GET'])
 def buyAndUpdate():
+    price = float(request.args.get('price'))
+    stock_name = request.args.get('stock_name')
+    num_shares = float(request.args.get('num_shares'))
+
     # update amount
+    # amount already exists, update amount
+    if 'amount' in session:
+        session['amount'] = session.get('amount') - (price * num_shares)
+    else:
+        session['amount'] = 10000 - (price * num_shares)
 
     # update myData
-    # 
+    buyStockDataUpdate(stock_name, curr_day, num_shares)
+
+    print(getMyData())
+ 
     return render_template("more.html")
 
 @app.route('/sell-update')
@@ -45,6 +63,7 @@ def sellAndUpdate():
     # 
     return render_template("more.html")
 
+# for the BUY table
 def getTableData(currentDay):
     industries, stocks = all_data()
     table = {} # result dictionary
@@ -52,6 +71,20 @@ def getTableData(currentDay):
         table[key] = [industries.get(key), stocks.get(key)[currentDay]]
 
     return table
+
+def getSellTableData(currentDay):
+    industries, stocks = all_data()
+    mystocks = getMyData()
+    table = {} # result dict
+    for key in mystocks.keys():
+        boughtDay = mystocks.get(key)[0] 
+        soldDay = mystocks.get(key)[1]
+        num_shares = mystocks.get(key)[2]
+        if soldDay == -1: # if -1, hasn't been sold yet
+            table[key] = [industries.get(key), stocks.get(key)[boughtDay], stocks.get(key)[currentDay], num_shares]
+    
+    return table
+
     
 @app.route('/buy' , methods=['POST'])
 def buy():
@@ -65,7 +98,7 @@ def buy2():
 
 @app.route('/sell', methods=["POST"])
 def sell():
-    return render_template("sell.html")
+    return render_template("sell.html", mystock=getSellTableData(curr_day))
 
 @app.route('/portfolio')
 def portfolio():
@@ -76,6 +109,13 @@ def exchange():
     stock_name = request.args.get('stock_name')
     price = request.args.get('stock_info[1]')
     return render_template("exchange.html", stock_name = stock_name, price= price)
+
+@app.route('/sell-exchange', methods=['GET'])
+def sell_exchange():
+    stock_name = request.args.get('stock_name')
+    price_now = request.args.get('price_now')
+    num_shares = request.args.get('num_shares')
+    return render_template("sell-exchange.html", stock_name = stock_name, price= price_now, num_shares=num_shares)
 
 @app.route('/more')
 def more():
