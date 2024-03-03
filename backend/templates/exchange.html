@@ -12,7 +12,7 @@
         }
 
         function goBack() {
-            window.history.back();
+            window.history.back(); // Go back to the previous page
         }
     </script>
 </head>
@@ -21,13 +21,13 @@
     <p id="price">{{ price }}</p> <!-- Price of one share -->
     <input type="number" id="shares" oninput="calculate()" min="0"/> <!-- Input for number of shares -->
     <p id="amount">Amount invested:</p> <!-- Display total amount -->
-    <form action="/buy-update" method="get">
-        <button class="buy-button">Buy</button>
+    <form action="/more" method="get">
+        <button class="buy">BUY</button>
     </form>
-    <form action="/sell-update" method="get">
-        <button class="sell-button">Sell</button>
+    <form action="/more" method="get">
+        <button class="sell">SELL</button>
     </form>
-    <button class="cancel-button" onclick="goBack()">Cancel</button>
+    <button class="cancel" onclick="goBack()">CANCEL</button>
 </body>
 </html>
 
