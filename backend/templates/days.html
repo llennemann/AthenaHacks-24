@@ -1,5 +1,17 @@
 <!DOCTYPE html>
 <html>
+<script type="text/javascript">
+    function subtract() {
+        var total = parseInt("{{ session['total_time'] }}", 10); // Parse as integer
+        var curr = parseInt("{{ session['curr_day'] }}", 10); // Parse as integer
+        return (total - curr) / 365;
+    }
+
+    window.onload = function() {
+        // Update the content of the paragraph with id 'daysLeft'
+        document.getElementById('yearsLeft').textContent = 'YEARS LEFT : ' + subtract();
+    };
+</script>
 <body>
     <script type="text/javascript">
         function subtract() {
@@ -33,7 +45,7 @@
     </form>
 
     <p id="yearsLeft">YEARS LEFT : </p> <!-- Added an id to this paragraph -->
-
+    
     <img class="days-girl" src="{{ url_for('static',filename='images/DALL_E_2024-03-02_16.30.png') }}"/>
     <form action="/" method="get">
         <button>
