@@ -66,7 +66,7 @@
     position: absolute;
     width: 163px;
     height: 74px;
-    left: 350px;
+    left: 447px;
     top: 224px;
     
     font-family: 'Calistoga';
@@ -74,7 +74,7 @@
     font-weight: 400;
     font-size: 30px;
     line-height: 62px;
-    text-align: center;
+    text-align: right;
     
     color: #000000;
 }
@@ -85,7 +85,7 @@
     position: absolute;
     width: 294px;
     height: 61px;
-    left: 460px;
+    left: 779px;
     top: 224px;
     
     font-family: 'Calistoga';
@@ -103,7 +103,7 @@
     position: absolute;
     width: 294px;
     height: 61px;
-    left: 640px;
+    left: 937px;
     top: 224px;
     
     font-family: 'Calistoga';
@@ -121,7 +121,7 @@
     position: absolute;
     width: 294px;
     height: 61px;
-    left: 870px;
+    left: 1101px;
     top: 224px;
     
     font-family: 'Calistoga';
@@ -137,7 +137,7 @@
 /* Line */
 .line{
     position: absolute;
-    width: 1153px;
+    width: 1243px;
     height: 0px;
     left: 165px;
     top: 304px;
@@ -150,7 +150,7 @@
     position: relative;
     width: 250px;
     height: 70px;
-    left: 170px;
+    left: 145px;
     top: 310px;
     
     font-family: 'Calistoga';
@@ -169,7 +169,7 @@
     position: relative;
     width: 350px;
     height: 70px;
-    left: 210px;
+    left: 226px;
     top: 310px;
     
     font-family: 'Calistoga';
@@ -178,7 +178,7 @@
     font-size: 30px;
     line-height: 50px;
     /* identical to box height */
-    text-align: center;
+    text-align: left;
     
     color: #000000;
 }
@@ -206,7 +206,7 @@
     position: relative;
     width: 71px;
     height: 70px;
-    left: 315px;
+    left: 402px;
     top: 310px;
     
     font-family: 'Calistoga';
@@ -224,7 +224,7 @@
     position: relative;
     width: 71px;
     height: 70px;
-    left: 315px;
+    left: 431px;
     top: 310px;
     
     font-family: 'Calistoga';

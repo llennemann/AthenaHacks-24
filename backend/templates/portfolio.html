@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/portfolio.css') }}">
+
+<link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'></link>
+<link href='https://fonts.googleapis.com/css?family=Cardo' rel='stylesheet'></link>
+
+
 <head>
     <script type="text/javascript">
         function subtract() {
@@ -10,40 +17,47 @@
 
         window.onload = function() {
             // Update the content of the paragraph with id 'daysLeft'
-            document.getElementById('daysLeft').textContent = 'DAYS LEFT : ' + subtract();
+            document.getElementById('daysLeft').textContent = 'Days Left: ' + subtract();
         };
     </script>
 </head>
 <body>
-    <p>portfolio time !</p>
+<div class="pink-rectangle"></div>
+<div class="big-title">your portfolio</div>
+<div class="amount">Current amount: {{ session['amount'] }}</div>
+<div class="line"></div>
+<img class="portfolio-logo" src="{{ url_for('static',filename='images/athenahackslogo2.png') }}"/>
+        
+
+    <p></p>
     <table>
         <tr>
-            <th>Stock Name</th>
-            <th>Current price</th>
-            <th>Number of Shares</th>
+            <th class="name">Name</th>
+            <th class="current-price">Current price</th>
+            <th class="num-shares"># of shares</th>
         </tr>
         {% for stock_name, stock_info in mystock.items() %}
         <tr>
-            <td>{{ stock_name }}</td>
-            <td>{{ stock_info[2] }}</td>
-            <td>{{ stock_info[3] }}</td>
+            <td class="get-name">{{ stock_name }}</td>
+            <td class="get-current-price">{{ stock_info[2] }}</td>
+            <td class="get-num-shares">{{ stock_info[3] }}</td>
         </tr>
         {% endfor %}
     </table>
 
 
-    <p id="daysLeft">DAYS LEFT : </p> <!-- Added an id to this paragraph -->
-    <p>Current amount: {{ session['amount'] }}</p>
-    <p>CURRENT DAY : {{ session['curr_day'] }}</p>
+    <p id="daysLeft" class="get-days-left"></p> <!-- Added an id to this paragraph -->
+    <p class="get-current-day">Current Day: {{ session['curr_day'] }}</p>
     <form action="/ending" method="get">
-        <button type="submit">END GAME</button>
+        <button type="submit" class="end-button">END GAME</button>
     </form>
     <form action="/buy-2">
-        <button type="buy">BUY</button>
+        <button type="buy" class="buy-button">BUY</button>
     </form>
     <form action="/sell" method="post">
-        <button type="submit">SELL</button>
+        <button type="submit" class="sell-button">SELL</button>
     </form>
-    <img src="{{ url_for('get_portfolio') }}" alt="Image">
+    
+    <img src="{{ url_for('get_portfolio') }}" alt="Image" class="graph">
 </body>
 </html>

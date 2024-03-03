@@ -1,0 +1,297 @@
+/* Rectangle 1 */
+.pink-rectangle{
+position: fixed;
+width: 100%;
+height: 100%;
+left: 0px;
+top: 0px;
+
+background: #F7CDD9;
+}
+
+/* your portfolio */
+.big-title{
+    position: absolute;
+    width: 647px;
+    height: 131px;
+    left: 396px;
+    top: 66px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 84px;
+    line-height: 109px;
+    text-align: center;
+    
+    color: #000000;
+}
+    
+
+/* name */
+.name{
+position: absolute;
+width: 73px;
+height: 76px;
+left: 982px;
+top: 292px;
+
+font-family: 'Calistoga';
+font-style: normal;
+font-weight: 400;
+font-size: 27px;
+line-height: 35px;
+text-align: center;
+
+color: #000000;
+}
+
+
+/* current price */
+.current-price{
+position: absolute;
+width: 130px;
+height: 62px;
+left: 1140px;
+top: 292px;
+
+font-family: 'Calistoga';
+font-style: normal;
+font-weight: 400;
+font-size: 27px;
+line-height: 35px;
+text-align: right;
+
+color: #000000;
+}
+
+/* # of shares */
+.num-shares{
+position: absolute;
+width: 108px;
+height: 62px;
+left: 1311px;
+top: 292px;
+
+font-family: 'Calistoga';
+font-style: normal;
+font-weight: 400;
+font-size: 27px;
+line-height: 35px;
+text-align: right;
+
+color: #000000;
+}
+
+
+/* Amazon */
+.get-name{
+position: relative;
+height: 37px;
+left: 982px;
+top: 391px;
+
+font-family: 'Calistoga';
+font-style: normal;
+font-weight: 400;
+font-size: 19px;
+line-height: 25px;
+
+color: #000000;
+}
+
+
+/* $1 */
+.get-current-price{
+    position: relative;
+    width: 32px;
+    height: 37px;
+    left: 1076px;
+    top: 391px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 25px;
+    text-align: right;
+    
+    color: #000000;
+}
+    
+
+/* X */
+.get-num-shares{
+    position: relative;
+    width: 32px;
+    height: 37px;
+    left: 1188px;
+    top: 391px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 25px;
+    text-align: right;
+    
+    color: #000000;
+}
+    
+
+/* 10 */
+.get-current-day{
+position: absolute;
+height: 37px;
+left: 182px;
+top: 739px;
+
+font-family: 'Calistoga';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 52px;
+text-align: right;
+
+color: #000000;
+}
+
+
+/* 10 */
+.get-days-left{
+position: absolute;
+height: 37px;
+left: 182px;
+top: 796px;
+
+font-family: 'Calistoga';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 52px;
+text-align: right;
+
+color: #000000;
+}
+
+
+/* Line 2 */
+.line{
+position: absolute;
+width: 438px;
+height: 0px;
+left: 982px;
+top: 377px;
+
+border: 1px solid #000000;
+}
+
+/* graph */
+.graph{
+position: absolute;
+width: 797px;
+height: 548px;
+left: 143px;
+top: 197px;
+
+background: #D9D9D9;
+}
+
+/* Rectangle 11 */
+.buy-button{
+    box-sizing: border-box;
+    
+    position: absolute;
+    width: 214px;
+    height: 127px;
+    left: 725px;
+    top: calc(50% - 127px/2 + 387.5px);
+    
+    background: #B0E4A7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 90px;
+    border: none;
+    
+font-family: 'Calistoga';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 62px;
+text-align: center;
+}
+
+/* Rectangle 11 */
+.sell-button{
+box-sizing: border-box;
+
+position: absolute;
+width: 214px;
+height: 127px;
+left: calc(50% - 214px/2 + 313px);
+top: calc(50% - 127px/2 + 387.5px);
+
+background: #1992D6;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 90px;
+border: none;
+
+font-family: 'Calistoga';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 62px;
+text-align: center;
+}
+
+/* Rectangle 14 */
+.end-button{
+box-sizing: border-box;
+
+position: absolute;
+width: 240px;
+height: 125px;
+left: calc(50% - 240px/2 + 566px);
+top: calc(50% - 125px/2 + 388.5px);
+
+background: #EEA7A7;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 90px;
+border: none;
+
+font-family: 'Calistoga';
+font-style: normal;
+font-weight: 400;
+font-size: 34px;
+line-height: 44px;
+text-align: center;
+}
+
+
+/* athenahackslogo2 2 */
+.portfolio-logo{
+position: absolute;
+width: 110px;
+height: 110px;
+left: 1275px;
+top: 50px;
+
+background: url(athenahackslogo2.png);
+}
+
+/* Amount */
+.amount{
+    position: absolute;
+    width: 242px;
+    height: 236px;
+    left: 1230px;
+    top: 165px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    
+    color: #000000;
+}
