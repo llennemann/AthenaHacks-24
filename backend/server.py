@@ -113,6 +113,18 @@ def portfolio():
     years = int(request.args.get('years'))
     months = int(request.args.get('months'))
     session['curr_day'] += (years * 365) + (months * 30)
+
+    if session['curr_day'] > session['total_time']:
+        flag = -1
+        for name, info in getMyData().items():
+            if info[1] == -1:
+                flag = 0
+        if flag == 0:
+            return render_template("sell.html", mystock=getSellTableData(session['curr_day']))
+        else:
+            return render_template("ending.html", profit=session['amount'])
+    
+
     session['curr_investment'] = (years * 365) + (months * 30)
     return render_template("portfolio.html", mystock=getSellTableData(session['curr_day']))
 
