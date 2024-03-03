@@ -177,7 +177,7 @@ def get_portfolio():
 
 @app.route('/ending', methods=['GET'])
 def income():
-    income = session["amount"]
+    income = session["amount"] - 5000
     return render_template("ending.html", profit=income)
 
 

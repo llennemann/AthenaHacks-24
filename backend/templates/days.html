@@ -4,7 +4,7 @@
     function subtract() {
         var total = parseInt("{{ session['total_time'] }}", 10); // Parse as integer
         var curr = parseInt("{{ session['curr_day'] }}", 10); // Parse as integer
-        return (total - curr) / 365;
+        return round((total - curr) / 365);
     }
 
     window.onload = function() {
