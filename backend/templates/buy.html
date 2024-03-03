@@ -10,11 +10,13 @@
             <td>{{ stock_name }}</td>
             <td>{{ stock_info[0] }}</td>
             <td>${{ stock_info[1] }}</td>
-            <td>${{ stock_info[1] }}</td>
             <td>
-                <form action="/exchange" method="get"> <!-- Form for each buy button with dynamic URL -->
-                    <button type="submit">Buy</button> <!-- Buy button -->
+                <form action="/exchange" method="get">
+                    <input type="hidden" name="stock_name" value="{{ stock_name }}">
+                    <input type="hidden" name="stock_info[1]" value="{{ stock_info[1] }}">
+                    <button type="submit">Buy</button>
                 </form>
+                
             </td>
         </tr>
         {% endfor %}

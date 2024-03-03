@@ -37,9 +37,13 @@ def buy():
 def portfolio():
     return render_template("portfolio.html")
 
-@app.route('/exchange')
+@app.route('/exchange', methods=['GET'])
 def exchange():
-    return render_template("exchange.html")
+    stock_name = request.args.get('stock_name')
+    price = request.args.get('stock_info[1]')
+    return render_template("exchange.html", stock_name = stock_name, price= price)
+
+
 
 if __name__ == '__main__':
     app.run()

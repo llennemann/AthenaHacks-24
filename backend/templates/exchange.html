@@ -1,3 +1,22 @@
-<HTML>
-    <p>STOCK EXHANGE<P>
-</HTML>
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function calculate() {
+            var price = parseFloat(document.getElementById('price').textContent);
+            var shares = parseFloat(document.getElementById('shares').value);
+            var amount = shares * price; // Calculate total amount
+            if (!isNaN(amount)) { // Check if amount is a number
+                document.getElementById('amount').textContent = 'Amount invested: ' + amount.toFixed(2); // Update text with calculated amount
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>{{ stock_name }}</p>
+    <p id="price">{{ price }}</p> <!-- Price of one share -->
+    <input type="number" id="shares" oninput="calculate()" min="0"/> <!-- Input for number of shares -->
+    <p id="amount">Amount invested:</p> <!-- Display total amount -->
+</body>
+</html>
+
