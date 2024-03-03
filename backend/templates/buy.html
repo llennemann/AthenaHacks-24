@@ -1,19 +1,25 @@
 <HTML>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/buy.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'></link>
+    <div class="buy-background-rectangle"></div>
+    <div class="green-buying-stocks-title">buying</div>
+    <div class="black-buying-stocks-title">stocks</div>
+
     <table>
         <tr>
-            <th>Stock Name</th>
-            <th>Industry</th>
-            <th>Stock Price</th>
+            <th class="ticker">Stock Name</th>
+            <th class="industry">Industry</th>
+            <th class="price">Stock Price</th>
+            <th class="line"></th>
         </tr>
         {% for stock_name, stock_info in stock_data.items() %}
         <tr>
-            <td>{{ stock_name }}</td>
-            <td>{{ stock_info[0] }}</td>
-            <td>${{ stock_info[1] }}</td>
-            <td>${{ stock_info[1] }}</td>
+            <td class="stock-name">{{ stock_name }}</td>
+            <td class="stock-industry">{{ stock_info[0] }}</td>
+            <td class="stock-price">${{ stock_info[1] }}</td>
             <td>
-                <form action="/exchange" method="get"> <!-- Form for each buy button with dynamic URL -->
-                    <button type="submit">Buy</button> <!-- Buy button -->
+                <form action="/exchange" method="get">
+                    <button class="buy-button" type="submit">Buy</button>
                 </form>
             </td>
         </tr>
@@ -21,7 +27,13 @@
     </table>
 
     <form action="/portfolio" method="get">
-        <button type="portfolio">Im done!</button>
+        <button class="portfolio-button" type="portfolio">back to portfolio</button>
+    </form>
+
+    <form action="/" method="get">
+        <button>
+            <img class="buy-logo" src="{{ url_for('static',filename='images/athenahackslogo2.png') }}"/>
+        </button>
     </form>
     
 </HTML>
