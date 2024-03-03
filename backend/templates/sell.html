@@ -27,4 +27,8 @@
         </tr>
         {% endfor %}
     </table>
+    <p>Current amount: {{ session['amount'] }}</p>
+    <form action="/portfolio" method="get">
+        <button class="portfolio-button" type="portfolio">back to portfolio</button>
+    </form>
 </HTML>

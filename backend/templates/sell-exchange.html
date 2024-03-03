@@ -19,7 +19,7 @@
         <p>{{ stock_name }}</p>
         <p id="price">{{ price_now }}</p>
         <p id="shares">{{ num_shares }} </p>
-        <p id="amount">Amount gained: </p>
+        <!--<p id="amount">Amount gained: </p> -->
         <form action="/sell-update" method="get">
             <input type="hidden" name="stock_name" value="{{ stock_name }}">
             <input type="hidden" name="price_now" value="{{ price_now }}">
