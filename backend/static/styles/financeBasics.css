@@ -1,0 +1,182 @@
+
+
+/* pink background 1 */
+.pink-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+
+    background: #F7CDD9;
+    z-index: 1;
+}
+
+/* investing is a wide field. */
+.big-title {
+    position: absolute;
+    width: 1100px;
+    height: 260px;
+    left: 220px;
+    top: 160px;
+
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;   
+    font-size: 100px;
+    line-height: 130px;
+
+    color: #000000;
+    z-index: 2;
+
+}
+
+/* Click here to learn more about... */
+.small-title {
+    position: absolute;
+    width: 687px;
+    height: 68px;
+    left: 220px;
+    top: 342px;
+
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 68px;
+    /* identical to box height */
+
+    color: #000000;
+    z-index: 2;
+
+}
+
+
+/* Rectangle 7 */
+.search1 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 956px;
+    height: 93px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 90px;
+    z-index: 2;
+    left: 200px;
+    top: 454px;
+}
+
+
+
+/* 🔍 what is the stock market? */
+.text1 {
+    position: absolute;
+    height: 54px;
+    left: 224px;
+    top: 476px;
+
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+
+    color: #1992D6;
+    z-index: 3;
+}
+
+
+/* Rectangle 10 */
+.search2 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 956px;
+    height: 93px;
+    left: 196px;
+    top: 577px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 90px;
+    z-index: 2;
+}
+
+/* 🔍 how to diversify your portfolio? */
+.text2 {
+    position: absolute;
+    height: 54px;
+    left: 224px;
+    top: 726px;
+
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+
+    color: #1992D6;
+    z-index: 3;
+
+}
+
+
+/* Rectangle 9 */
+.search3 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 956px;
+    height: 93px;
+    left: 192px;
+    top: 708px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 90px;
+    z-index: 2;
+}
+
+/* 🔍 difference between bonds/funds/stocks? */
+.text3 {
+    position: absolute;
+    height: 54px;
+    left: 224px;
+    top: 596px;
+
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+
+    color: #1992D6;
+    z-index: 3;
+
+}
+
+
+/* athenahackslogo2 2 */
+.landing-page-logo {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 1275px;
+    top: 50px;
+
+    background: url(athenahackslogo2.png);
+    z-index: 2;
+
+}
+
+body {
+    margin: 4px;
+}
+
+/*dr stox!*/
+.girl {
+    position: absolute;
+    /* width: 588px; */
+    height: 737px;
+    z-index: 4;
+    background: url(DALL_E_2024-03-02_16.30.png);
+    left: 874px;
+    top: 322px;
+    
+}
