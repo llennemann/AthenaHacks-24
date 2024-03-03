@@ -39,7 +39,8 @@ def data(time_bought, time_sold, stock_names): #time is in dayas and stock_names
             
     dict_stocks = generate(stocks)
     my_data = {}
+    industries = {}
     for i in stock_names:
         my_data[i] = dict_stocks[i]
-
-    return my_data
+        industries[i] = stocks[i]
+    return my_data, industries

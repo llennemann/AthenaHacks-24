@@ -11,22 +11,15 @@ def home():
 @app.route('/tryMe')
 def tryMe():
     return render_template("tryMe.html")
-
-#def landingPgRouting():
-
-# def contact():
-#     if request.form['submit_button'] == 'try me!':
-#         return render_template('tryMe.html')
-#     elif request.form['submit_button'] == 'Do Something Else':
-#         pass # do something else
-#     else:
-#         pass # unknown
     
-@app.route('/submit_time' , methods=['POST'])
-def submit_time():
+@app.route('/buy' , methods=['POST'])
+def buy():
      years = request.form['number']
      total_time = int(years) * 365
-     return render_template("submit_time.html", total_time = total_time)
+     return render_template("buy.html", total_time = total_time)
+@app.route('/portfolio')
+def portfolio():
+    return render_template("portfolio.html")
 
 if __name__ == '__main__':
     app.run()
