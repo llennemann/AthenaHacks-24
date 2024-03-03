@@ -16,6 +16,7 @@ curr_day = 0
 
 @app.route('/')
 def home():
+    session['amount'] = 10000
     return render_template("landingPage.html")
 
 @app.route('/tryMe')
@@ -55,9 +56,9 @@ def buyAndUpdate():
  
     return render_template("more.html")
 
-@app.route('/sell-update')
+@app.route('/sell-update', methods=['GET'])
 def sellAndUpdate():
-    price = float(request.args.get('price'))
+    price = float(request.args.get('price_now'))
     stock_name = request.args.get('stock_name')
     num_shares = float(request.args.get('num_shares'))
 
