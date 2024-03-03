@@ -9,7 +9,7 @@
 
     window.onload = function() {
         // Update the content of the paragraph with id 'daysLeft'
-        document.getElementById('yearsLeft').textContent = 'YEARS LEFT : ' + subtract();
+        document.getElementById('yearsLeft').textContent = 'Years left : ' + subtract();
     };
 </script>
 <body>
@@ -22,7 +22,7 @@
 
         window.onload = function() {
             // Update the content of the paragraph with id 'daysLeft'
-            document.getElementById('yearsLeft').textContent = 'YEARS LEFT : ' + subtract();
+            document.getElementById('yearsLeft').textContent = 'Years Left : ' + subtract();
         };
     </script>
 
@@ -44,7 +44,7 @@
         <input class="submit-button" type="submit" value="Submit">
     </form>
 
-    <p id="yearsLeft">YEARS LEFT : </p> <!-- Added an id to this paragraph -->
+    <p id="yearsLeft" class="years-left"></p> <!-- Added an id to this paragraph -->
     
     <img class="days-girl" src="{{ url_for('static',filename='images/DALL_E_2024-03-02_16.30.png') }}"/>
     <form action="/" method="get">
