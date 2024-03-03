@@ -1,7 +1,9 @@
 import time
-from flask import Flask, request, render_template, redirect, session
+from flask import Flask, request, render_template, redirect, session, send_file, Response
 from flask_session import Session
-from data_generator import all_data, buyStockDataUpdate, getMyData, sellStockDataUpdate
+import matplotlib.pyplot as plt
+import io
+from data_generator import all_data, buyStockDataUpdate, getMyData, sellStockDataUpdate, portfolio_data
 
 
 app = Flask(__name__)
@@ -12,7 +14,7 @@ Session(app)
 
 @app.route('/')
 def home():
-    session['amount'] = 10000
+    session['amount'] = 5000
     session['curr_day'] = 0
     return render_template("landingPage.html")
 
@@ -31,7 +33,7 @@ def financeBasics():
 # cancel buy/sell transaction
 @app.route('/cancel')
 def cancel():
-     return render_template("buy.html", total_time = total_time, stock_data=getTableData(session['curr_day']))
+     return render_template("buy.html", total_time = session["total_time"], stock_data=getTableData(session['curr_day']))
 
 @app.route('/buy-update', methods=['GET'])
 def buyAndUpdate():
@@ -112,7 +114,7 @@ def portfolio():
     months = int(request.args.get('months'))
     session['curr_day'] += (years * 365) + (months * 30)
     session['curr_investment'] = (years * 365) + (months * 30)
-    return render_template("portfolio.html")
+    return render_template("portfolio.html", mystock=getSellTableData(session['curr_day']))
 
 @app.route('/days')
 def days():
@@ -134,6 +136,31 @@ def sell_exchange():
 @app.route('/more')
 def more():
     return render_template("more.html")
+
+@app.route('/ending')
+def ending():
+    return render_template("ending.html")
+
+def create_stock_price_plot(dict_stocks):
+    for stock_name, prices in dict_stocks.items():
+        plt.plot(prices, label=stock_name)
+    plt.legend()
+    plt.xlabel('Days')
+    plt.ylabel('Stock Price')
+    plt.title('Simulated Stock Prices Over Time')
+
+    # Save plot to a BytesIO object
+    buf = io.BytesIO()
+    plt.savefig(buf, format='png')
+    buf.seek(0)
+    return buf
+
+@app.route('/portfolio-data')
+def get_portfolio():
+    portfolio = portfolio_data(session["curr_day"])
+    buf = create_stock_price_plot(portfolio)
+    return Response(buf.getvalue(), mimetype='image/png')
+
 
 
 if __name__ == '__main__':

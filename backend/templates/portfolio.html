@@ -1,6 +1,49 @@
-<HTML>
-    <p>portfolio time !<p>
-    <p></p>
-    <p>{{ session['curr_day'] }}</p>
-    <p>{{ session['curr_investment'] }}</p>
-</HTML>
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function subtract() {
+            var total = parseInt("{{ session['total_time'] }}", 10); // Parse as integer
+            var curr = parseInt("{{ session['curr_day'] }}", 10); // Parse as integer
+            return total - curr;
+        }
+
+        window.onload = function() {
+            // Update the content of the paragraph with id 'daysLeft'
+            document.getElementById('daysLeft').textContent = 'DAYS LEFT : ' + subtract();
+        };
+    </script>
+</head>
+<body>
+    <p>portfolio time !</p>
+    <table>
+        <tr>
+            <th>Stock Name</th>
+            <th>Current price</th>
+            <th>Number of Shares</th>
+        </tr>
+        {% for stock_name, stock_info in mystock.items() %}
+        <tr>
+            <td>{{ stock_name }}</td>
+            <td>{{ stock_info[2] }}</td>
+            <td>{{ stock_info[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+    <p id="daysLeft">DAYS LEFT : </p> <!-- Added an id to this paragraph -->
+    <p>Current amount: {{ session['amount'] }}</p>
+    <p>CURRENT DAY : {{ session['curr_day'] }}</p>
+    <form action="/ending" method="get">
+        <button type="submit">END GAME</button>
+    </form>
+    <form action="/buy-2">
+        <button type="buy">BUY</button>
+    </form>
+    <form action="/sell" method="post">
+        <button type="submit">SELL</button>
+    </form>
+    <img src="{{ url_for('get_portfolio') }}" alt="Image">
+</body>
+</html>

@@ -43,12 +43,13 @@ def all_data(): #time is in dayas and stock_names is a list of strings
 
     return stocks, generate(stocks)
      
-def portfolio_data (time_bought, time_sold, stock_names):
+def portfolio_data (curr_day): # pass sessions["curr_day"]
     dict_stocks = all_data()[1]
-    my_data = {}
-    for i in stock_names:
-        my_data[i] = dict_stocks[i][time_bought:time_sold]
-    return my_data
+    portfolio = {}
+    for name, info in my_data.items():
+        if info[1] == -1:
+            portfolio[name] = dict_stocks[name][info[0]:curr_day]
+    return portfolio
 
 def getMyData():
     return my_data
