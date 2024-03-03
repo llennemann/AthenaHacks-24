@@ -5,7 +5,9 @@ import Girl from '../images/DALL_E_2024-03-02_16.30.png';
 export default function LandingPage () {
     return (
         <>
-            <div class="background-rectangle"></div>
+            <link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'></link>
+            <link href='https://fonts.googleapis.com/css?family=Cardo' rel='stylesheet'></link>
+            <div class="landing-page-background-rectangle"></div>
             <div class="small-title-text">this is your</div>
             <div class="big-title-text">finance buddy</div>
             <Link to="/try-me">
