@@ -45,4 +45,3 @@ def portfolio_data (time_bought, time_sold, stock_names):
     for i in stock_names:
         my_data[i] = dict_stocks[i][time_bought:time_sold]
     return my_data
-
