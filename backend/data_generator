@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def data(time_bought, time_sold, stock_names): #time is in dayas and stock_names is a list of strings
+def all_data(): #time is in dayas and stock_names is a list of strings
     stocks = { 
         "BluePeak Energy": "Renewable Energy",
         "CyberNetic Tech": "Artificial Intelligence",
@@ -16,7 +16,7 @@ def data(time_bought, time_sold, stock_names): #time is in dayas and stock_names
     }
 
 
-    def generate(stocks, days=time_sold - time_bought):
+    def generate(stocks, days=10950):
         np.random.seed(120)
         new_dict = {}
         mu_set = [0.0005, 0.0007, 0.0001, 0.0006, 0.0004, 0.0008, 0.0009, 0.0007, 0.0005, 0.0006]
@@ -36,10 +36,12 @@ def data(time_bought, time_sold, stock_names): #time is in dayas and stock_names
             new_dict[stock] = prices
 
         return new_dict
-            
-    dict_stocks = generate(stocks)
+
+    return stocks, generate(stocks)
+     
+def my_data (time_bought, time_sold, stock_names):
+    dict_stocks = all_data()
     my_data = {}
     for i in stock_names:
-        my_data[i] = dict_stocks[i]
-
+        my_data[i] = dict_stocks[i][time_bought:time_sold]
     return my_data
