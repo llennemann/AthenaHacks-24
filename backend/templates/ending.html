@@ -1,2 +1,23 @@
-<p> THIS IS THE END </p>
-<p>{{ profit }}</p>
+<html>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/ending.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'></link>
+    <link href='https://fonts.googleapis.com/css?family=Cardo' rel='stylesheet'></link>
+
+    <div class="days-background-rectangle"></div>
+    <div class="speech-bubble"></div>
+    <div class="speech-bubble-two"></div>
+    <div class="speech-bubble-text">Time is up. Good job! The amount you have left is:</div>
+    <div class="gains">${{ profit }}</div>
+    <div class="more-bubble-text">Note that you can make all the right decisions, but still end up losing money because investing is inherently unpredictable. This is a limited model of what it looks like to invest, but I hope you learned something today! There’s a lot more to investing, but it’s nothing that you can’t learn with a little practice and diligence!  
+    </div>
+
+    <img class="days-girl" src="{{ url_for('static',filename='images/DALL_E_2024-03-02_16.30.png') }}"/>
+    <form action="/" method="get">
+        <button>
+            <img class="days-logo" src="{{ url_for('static',filename='images/athenahackslogo2.png') }}"/>
+        </button>
+    </form>
+    <form action="/" method="get">
+        <button class="back">Back to landing page</button>
+    </form>
+</html>

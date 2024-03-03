@@ -3,7 +3,7 @@ from flask import Flask, request, render_template, redirect, session, send_file,
 from flask_session import Session
 import matplotlib.pyplot as plt
 import io
-from data_generator import all_data, buyStockDataUpdate, getMyData, profitLoss, sellStockDataUpdate, portfolio_data
+from data_generator import all_data, buyStockDataUpdate, getMyData, sellStockDataUpdate, portfolio_data
 
 
 app = Flask(__name__)
@@ -142,21 +142,18 @@ def sell_exchange():
 def more():
     return render_template("more.html")
 
-@app.route('/ending')
-def ending():
-    return render_template("ending.html")
-
 def create_stock_price_plot(dict_stocks):
+    fig, ax = plt.subplots()
     for stock_name, prices in dict_stocks.items():
-        plt.plot(prices, label=stock_name)
-    plt.legend()
-    plt.xlabel('Days')
-    plt.ylabel('Stock Price')
-    plt.title('Simulated Stock Prices Over Time')
+        ax.plot(prices, label=stock_name)
+    ax.legend()
+    ax.set_xlabel('Days')
+    ax.set_ylabel('Stock Price')
+    ax.set_title('Simulated Stock Prices Over Time')
 
     # Save plot to a BytesIO object
     buf = io.BytesIO()
-    plt.savefig(buf, format='png')
+    fig.savefig(buf, format='png')
     buf.seek(0)
     return buf
 
@@ -166,10 +163,10 @@ def get_portfolio():
     buf = create_stock_price_plot(portfolio)
     return Response(buf.getvalue(), mimetype='image/png')
 
-@app.route('/ending')
+@app.route('/ending', methods=['GET'])
 def income():
-    income = profitLoss(session["amount"] ,session["curr_day"])
-    return render_template("ending.html", profit = income)
+    income = session["amount"]
+    return render_template("ending.html", profit=income)
 
 
 if __name__ == '__main__':

@@ -53,17 +53,11 @@ def portfolio_data (curr_day): # pass sessions["curr_day"]
 
 def getMyData():
     return my_data
-
-def profitLoss (curr_amt, curr_day):
-    dict_stocks = all_data()[1]
-    net = 0
-    for name, info in my_data.items():
-        net += dict_stocks[name][curr_day] - dict_stocks[name][info[0]]
-    return curr_amt + net
     
 
 def buyStockDataUpdate(stock_name, curr_day, num_shares):
-    my_data[stock_name] = [curr_day, -1, num_shares]
+    if stock_name not in my_data.keys():
+        my_data[stock_name] = [curr_day, -1, num_shares]
 
 def sellStockDataUpdate(stock_name, curr_day):
     my_data[stock_name][1] = curr_day # update sell date to current day
