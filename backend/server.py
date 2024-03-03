@@ -3,7 +3,7 @@ from flask import Flask, request, render_template, redirect, session, send_file,
 from flask_session import Session
 import matplotlib.pyplot as plt
 import io
-from data_generator import all_data, buyStockDataUpdate, getMyData, sellStockDataUpdate, portfolio_data
+from data_generator import all_data, buyStockDataUpdate, getMyData, profitLoss, sellStockDataUpdate, portfolio_data
 
 
 app = Flask(__name__)
@@ -161,6 +161,10 @@ def get_portfolio():
     buf = create_stock_price_plot(portfolio)
     return Response(buf.getvalue(), mimetype='image/png')
 
+@app.route('/ending')
+def income():
+    income = profitLoss(session["amount"] ,session["curr_day"])
+    return render_template("ending.html", profit = income)
 
 
 if __name__ == '__main__':
