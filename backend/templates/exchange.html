@@ -10,6 +10,10 @@
                 document.getElementById('amount').textContent = 'Amount invested: ' + amount.toFixed(2); // Update text with calculated amount
             }
         }
+
+        function goBack() {
+            window.history.back();
+        }
     </script>
 </head>
 <body>
@@ -17,6 +21,13 @@
     <p id="price">{{ price }}</p> <!-- Price of one share -->
     <input type="number" id="shares" oninput="calculate()" min="0"/> <!-- Input for number of shares -->
     <p id="amount">Amount invested:</p> <!-- Display total amount -->
+    <form action="/buy-update" method="get">
+        <button class="buy-button">Buy</button>
+    </form>
+    <form action="/sell-update" method="get">
+        <button class="sell-button">Sell</button>
+    </form>
+    <button class="cancel-button" onclick="goBack()">Cancel</button>
 </body>
 </html>
 
