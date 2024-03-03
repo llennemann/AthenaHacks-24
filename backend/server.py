@@ -116,6 +116,11 @@ def portfolio():
     session['curr_investment'] = (years * 365) + (months * 30)
     return render_template("portfolio.html", mystock=getSellTableData(session['curr_day']))
 
+@app.route('/portfolio-from-sell', methods=['GET'])
+def portfolioSell():
+    return render_template("portfolio.html", mystock=getSellTableData(session['curr_day']))
+
+
 @app.route('/days')
 def days():
     return render_template("days.html")

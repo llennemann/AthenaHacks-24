@@ -35,7 +35,7 @@ def all_data(): #time is in dayas and stock_names is a list of strings
             prices = [start_price]
             for _ in range(1, days):
                 change = np.random.normal(mu, sigma)
-                prices.append(prices[-1] * (1 + change))
+                prices.append(round(prices[-1] * (1 + change)))
 
             new_dict[stock] = prices
 
