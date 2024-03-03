@@ -133,10 +133,21 @@
 }
 
 /* Girl */
-.girl{
+.landing-page-girl{
     position: absolute;
     width: 500px;
     height: 500px;
     left: 860px;
     top: 280px;
+}
+
+/* Landing Page Logo */
+.landing-page-logo{
+    position: absolute;
+    width: 214px;
+    height: 221px;
+    left: 1082px;
+    top: 156px;
+    
+    background: url(athenahackslogo2.png);
 }
