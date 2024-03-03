@@ -11,6 +11,10 @@ def home():
 @app.route('/tryMe')
 def tryMe():
     return render_template("tryMe.html")
+
+@app.route('/aboutMe')
+def aboutMe():
+    return render_template("aboutMe.html")
     
 @app.route('/buy' , methods=['POST'])
 def buy():
