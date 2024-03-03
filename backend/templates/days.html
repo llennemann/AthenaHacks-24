@@ -1,1 +1,19 @@
-<p>enter number of days you want it for</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+</head>
+<body>
+    <p>Enter the number of days you want it for:</p>
+    <form action="/portfolio" method="get">
+        <label for="years">Years:</label>
+        <input type="number" id="years" name="years" min="0" required><br><br>
+
+        <label for="months">Months:</label>
+        <input type="number" id="months" name="months" min="0" max="11" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
