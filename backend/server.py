@@ -1,7 +1,7 @@
 import time
 from flask import Flask, request, render_template, redirect, session
 from flask_session import Session
-from data_generator import all_data, buyStockDataUpdate, getMyData
+from data_generator import all_data, buyStockDataUpdate, getMyData, sellStockDataUpdate
 
 
 app = Flask(__name__)
@@ -57,10 +57,16 @@ def buyAndUpdate():
 
 @app.route('/sell-update')
 def sellAndUpdate():
+    price = float(request.args.get('price'))
+    stock_name = request.args.get('stock_name')
+    num_shares = float(request.args.get('num_shares'))
+
     # update amount
-    
+    session['amount'] = session.get('amount') + (price * num_shares)
+
     # update myData
-    # 
+    sellStockDataUpdate(stock_name, curr_day)
+
     return render_template("more.html") 
 
 # for the BUY table
@@ -119,7 +125,7 @@ def sell_exchange():
     stock_name = request.args.get('stock_name')
     price_now = request.args.get('price_now')
     num_shares = request.args.get('num_shares')
-    return render_template("sell-exchange.html", stock_name = stock_name, price= price_now, num_shares=num_shares)
+    return render_template("sell-exchange.html", stock_name = stock_name, price_now= price_now, num_shares=num_shares)
 
 @app.route('/more')
 def more():
