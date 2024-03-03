@@ -1,0 +1,125 @@
+/* Rectangle 1 */
+.pinkrect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+
+    background: #F7CDD9;
+    z-index: 1;
+}
+
+
+/* you have $10,000. let’s start investing! */
+.big-text-title {
+
+    position: absolute;
+    width: 1050px;
+    height: 236px;
+    left: 195px;
+    top: 133px;
+
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 130px;
+    text-align: center;
+
+    color: #000000;
+    z-index: 2;
+}
+
+
+/* when do you want to take out your money? (when will the game end?) */
+.small-text-title {
+    position: absolute;
+    width: 1256px;
+    height: 149px;
+    left: 92px;
+    top: 450px;
+
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 83px;
+    text-align: center;
+
+    color: #000000;
+    z-index: 2;
+}
+
+
+/* Hide default radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Style the label to create custom radio button appearance */
+.radio-label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 35px 75px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-spacing: 30px;
+    background-color: #fff;
+
+    font-size: 40px;
+    font-family: "Calistoga";
+
+    margin-right: 10px; /* Adjust margin as needed */
+    position: relative;  
+    left:15%;
+    z-index: 2;
+    transform: translate(0%, 500%);
+}
+
+/* Style for when the radio button is checked */
+input[type="radio"]:checked + .radio-label {
+    background-color: #FCA2BC;
+    color: #fff;
+}
+
+
+/* athenahackslogo2 2 */
+.logo {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 1275px;
+    top: 50px;
+
+    background: url(athenahackslogo2.png);
+}
+
+form {
+    position: relative;
+    z-index: 2;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 35px 35px; /* Add padding */
+    margin-top: 20px; /* Add margin from other elements */
+    font-size: 40px; /* Set font size */
+    font-family: "Calistoga"; /* Set font family */
+    background-color: #2D7D48; /* Set background color */
+    color: white; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 50px; /* Add border radius */
+    cursor: pointer; /* Add pointer cursor on hover */  
+    text-decoration: none; /* Remove underline */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+    left: 15%;
+    transform: translate(0%, 500%);
+}
+
+/* Change button color on hover */
+.submit-button:hover {
+    background-color: #FCA2BC; /* Darker blue when hovered */
+}
