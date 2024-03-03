@@ -1,0 +1,227 @@
+/* Buy Background Rectangle */
+.buy-background-rectangle{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    
+    background: #F7CDD9;
+}
+
+/* Green Buying Stocks Title */
+.green-buying-stocks-title{
+    position: absolute;
+    width: 647px;
+    height: 131px;
+    left: 425px;
+    top: 50px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 130px;
+    
+    color: #2D7D48;
+}
+
+/* Black Buying Stocks Title */
+.black-buying-stocks-title{
+    position: absolute;
+    width: 647px;
+    height: 131px;
+    left: 775px;
+    top: 50px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 130px;
+    
+    color: #000000;
+}
+
+/* Ticker */
+.ticker{
+    position: absolute;
+    width: 300px;
+    height: 74px;
+    left: 162px;
+    top: 224px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 62px;
+    text-align: center;
+    
+    color: #000000;
+}
+
+/* Industry */
+.industry{
+    position: absolute;
+    width: 163px;
+    height: 74px;
+    left: 550px;
+    top: 224px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 62px;
+    text-align: center;
+    
+    color: #000000;
+}
+
+
+/* current price */
+.price{
+    position: absolute;
+    width: 294px;
+    height: 61px;
+    left: 840px;
+    top: 224px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 62px;
+    text-align: center;
+    
+    color: #000000;
+}
+
+/* Line */
+.line{
+    position: absolute;
+    width: 1153px;
+    height: 0px;
+    left: 165px;
+    top: 304px;
+    
+    background: #000000;
+}
+
+/* Stock Name */
+.stock-name{
+    position: relative;
+    width: 250px;
+    height: 70px;
+    left: 170px;
+    top: 310px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    /* identical to box height */
+    text-align: center;
+    
+    color: #000000;
+}
+
+/* Stock Industry */
+.stock-industry{
+    position: relative;
+    width: 350px;
+    height: 70px;
+    left: 210px;
+    top: 310px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    /* identical to box height */
+    text-align: center;
+    
+    color: #000000;
+}
+
+/* Stock Price */
+.stock-price{
+    position: relative;
+    width: 71px;
+    height: 70px;
+    left: 315px;
+    top: 310px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    
+    color: #000000;
+}
+
+/* Portfolio Button */
+.portfolio-button{
+    box-sizing: border-box;
+
+    position: relative;
+    width: 454px;
+    height: 104px;
+    left: 825px;
+    top: 330px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 90px;
+    
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 65px;
+    
+    color: #000000;
+    
+    border: none;
+}
+
+/* Buy Button */
+.buy-button{
+    box-sizing: border-box;
+
+    position: relative;
+    width: 120px;
+    height: 70px;
+    left: 450px;
+    top: 310px;
+    
+    background: #B0E4A7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 70px;
+
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 37px;
+
+    color: #000000;
+
+    border: none;
+}
+
+/* Buy Logo */
+.buy-logo{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 1300px;
+    top: 20px;
+    
+    background: url(athenahackslogo2.png);
+}

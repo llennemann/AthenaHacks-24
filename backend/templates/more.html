@@ -1,12 +1,28 @@
 <HTML>
-    <h1>would you like to exchange another? </h1>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/more.css') }}">
+    <link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'></link>
+    <link href='https://fonts.googleapis.com/css?family=Cardo' rel='stylesheet'></link>
+
+    <div class="more-background-rectangle"></div>
+    <div class="speech-bubble-1"></div>
+    <div class="speech-bubble-2"></div>
+    <div class="speech-text-1">would you like to exchange another stock?</div>
+    <div class="speech-text-2">note that having more securities and ones with different types will help you diversify your portfolio and lower your risk! it’s better not to put all your eggs in 1 basket.</div>
+    
     <form action="/buy-2">
-        <button class="buy-button">Yes, buy more!</button>
+        <button class="more-button">Yes, buy more!</button>
     </form>
     <form action="/sell" method="post">
         <button class="sell-button">Yes, sell more!</button>
     </form>
-    <form action="/portfolio" method="get">
-        <button class="portfolio-button">No, back to my portfolio!</button>
+    <form action="/days" method="get">
+        <button class="no-button">No, back to my portfolio!</button>
+    </form>
+
+    <img class="more-girl" src="{{ url_for('static',filename='images/DALL_E_2024-03-02_16.30.png') }}"/>
+    <form action="/" method="get">
+        <button>
+            <img class="more-logo" src="{{ url_for('static',filename='images/athenahackslogo2.png') }}"/>
+        </button>
     </form>
 </HTML>
