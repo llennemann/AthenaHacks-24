@@ -1,0 +1,161 @@
+/* Days Background Rectangle */
+.days-background-rectangle{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    
+    background: #F7CDD9;
+}
+
+/* Speech Bubble */
+.speech-bubble{
+    position: absolute;
+    width: 947px;
+    height: 430px;
+    left: 309px;
+    top: 79px;
+    
+    background: #FFFFFF;
+
+    border-radius: 50%;
+}
+
+/* Speech Bubble Text */
+.speech-bubble-text{
+    position: absolute;
+    width: 793px;
+    height: 236px;
+    left: 390px;
+    top: 190px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 63px;
+    line-height: 82px;
+    text-align: center;
+    
+    color: #000000;
+}
+
+/* Year Text */
+.year-text{
+    position: absolute;
+    width: 921px;
+    height: 59px;
+    left: 300px;
+    top: 540px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 56px;
+    text-align: center;
+    
+    color: #000000;
+}
+
+/* Year Input */
+.year-input{
+    position: absolute;
+    width: 165px;
+    height: 80px;
+    left: 850px;
+    top: 530px;
+    
+    background: #FFFFFF;
+    border-radius: 90px;
+
+    border: none;
+
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 47px;
+
+    color: #000000;
+}
+
+/* Month Text */
+.month-text{
+    position: absolute;
+    width: 921px;
+    height: 59px;
+    left: 280px;
+    top: 640px;
+    
+    font-family: 'Calistoga';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 56px;
+    text-align: center;
+    
+    color: #000000;
+}
+
+/* Month Input */
+.month-input{
+    position: absolute;
+    width: 165px;
+    height: 80px;
+    left: 850px;
+    top: 630px;
+    
+    background: #FFFFFF;
+    border-radius: 90px;
+
+    border: none;
+
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 47px;
+
+    color: #000000;
+}
+
+/* Submit Button */
+.submit-button{
+    position: absolute;
+    width: 165px;
+    height: 80px;
+    left: 1119px;
+    top: 630px;
+    
+    background: #B0E4A7;
+    border-radius: 90px;
+
+    border: none;
+
+    font-family: 'Cardo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 47px;
+
+    color: #000000;
+}
+
+/* Athena Hacks Logo */
+.days-girl{
+    position: absolute;
+    width: 612px;
+    height: 638px;
+    left: -27px;
+    top: 292px;
+}
+
+/* Athena Hacks Logo */
+.days-logo{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    left: 1300px;
+    top: 20px;
+}
