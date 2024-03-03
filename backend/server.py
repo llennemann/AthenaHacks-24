@@ -77,6 +77,9 @@ def exchange():
     price = request.args.get('stock_info[1]')
     return render_template("exchange.html", stock_name = stock_name, price= price)
 
+@app.route('/more')
+def more():
+    return render_template("more.html")
 
 
 if __name__ == '__main__':
