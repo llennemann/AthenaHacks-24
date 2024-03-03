@@ -53,21 +53,19 @@
     color: #000000;
 }
 
-/* Further Bubble Text */
-.more-bubble-text{
+/* more text*/
+.more-bubble-text {
     position: absolute;
-    width: 793px;
+    width: 700px;
     height: 236px;
-    left: 480px;
-    top: 480px;
-    
+    left: 507px;
+    top: 495px;
     font-family: 'Calistoga';
     font-style: normal;
     font-weight: 200;
-    font-size: 35px;
+    font-size: 29px;
     line-height: 40px;
     text-align: center;
-    
     color: #000000;
 }
 
@@ -112,24 +110,24 @@
 /* back to landing pg Button */
 .back{
     box-sizing: border-box;
-
     position: relative;
-    width: 454px;
+    width: 501px;
     height: 104px;
-    left: 825px;
-    top: 330px;
-    
-    background: #FFFFFF;
+    top: 720px;
+    left: 991px;
+    background: #B0E4A7;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 90px;
-    
-    font-family: 'Cardo';
+    font-family: 'Calistoga';
     font-style: normal;
     font-weight: 400;
-    font-size: 48px;
+    font-size: 35px;
     line-height: 65px;
-    
     color: #000000;
-    
     border: none;
+}
+
+.back:hover{
+    background-color: #2D7D48;
+    color: #fff;
 }
