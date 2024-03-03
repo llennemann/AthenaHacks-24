@@ -36,6 +36,7 @@
     <p id="price">{{ price }}</p> <!-- Price of one share -->
     <input type="number" id="shares" oninput="calculate()" min="0"/> <!-- Input for number of shares -->
     <p id="amount">Amount invested:</p> <!-- Display total amount -->
+    <p>Current amount left: {{ session['amount'] }}</p>
     <form id="update_form" action="/buy-update" method="get">
         <input type="hidden" name="stock_name" value="{{ stock_name }}">
         <input type="hidden" name="price" value="{{ price }}">
