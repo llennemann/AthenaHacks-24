@@ -9,14 +9,11 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-total_time = 0 #in days
-curr_day = 0
-
-
 
 @app.route('/')
 def home():
     session['amount'] = 10000
+    session['curr_day'] = 0
     return render_template("landingPage.html")
 
 @app.route('/tryMe')
@@ -34,7 +31,7 @@ def financeBasics():
 # cancel buy/sell transaction
 @app.route('/cancel')
 def cancel():
-     return render_template("buy.html", total_time = total_time, stock_data=getTableData(curr_day))
+     return render_template("buy.html", total_time = total_time, stock_data=getTableData(session['curr_day']))
 
 @app.route('/buy-update', methods=['GET'])
 def buyAndUpdate():
@@ -50,7 +47,7 @@ def buyAndUpdate():
         session['amount'] = 10000 - (price * num_shares)
 
     # update myData
-    buyStockDataUpdate(stock_name, curr_day, num_shares)
+    buyStockDataUpdate(stock_name, session['curr_day'], num_shares)
 
     print(getMyData())
  
@@ -66,7 +63,7 @@ def sellAndUpdate():
     session['amount'] = session.get('amount') + (price * num_shares)
 
     # update myData
-    sellStockDataUpdate(stock_name, curr_day)
+    sellStockDataUpdate(stock_name, session['curr_day'])
 
     return render_template("more.html") 
 
@@ -95,20 +92,26 @@ def getSellTableData(currentDay):
     
 @app.route('/buy' , methods=['POST'])
 def buy():
-     years = request.form['number']
-     total_time = int(years) * 365
-     return render_template("buy.html", total_time = total_time, stock_data=getTableData(curr_day))
+    years = request.form['number']
+    session['total_time'] = int(years) * 365
+    print(session['total_time'])
+    #total_time = int(years) * 365
+    return render_template("buy.html", total_time = session['total_time'], stock_data=getTableData(session['curr_day']))
 
 @app.route('/buy-2')
 def buy2():
-    return render_template("buy.html", stock_data=getTableData(curr_day))
+    return render_template("buy.html", stock_data=getTableData(session['curr_day']))
 
 @app.route('/sell', methods=["POST"])
 def sell():
-    return render_template("sell.html", mystock=getSellTableData(curr_day))
+    return render_template("sell.html", mystock=getSellTableData(session['curr_day']))
 
-@app.route('/portfolio')
+@app.route('/portfolio', methods=['GET'])
 def portfolio():
+    years = int(request.args.get('years'))
+    months = int(request.args.get('months'))
+    session['curr_day'] += (years * 365) + (months * 30)
+    session['curr_investment'] = (years * 365) + (months * 30)
     return render_template("portfolio.html")
 
 @app.route('/days')
