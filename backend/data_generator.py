@@ -39,7 +39,7 @@ def all_data(): #time is in dayas and stock_names is a list of strings
 
     return stocks, generate(stocks)
      
-def my_data (time_bought, time_sold, stock_names):
+def portfolio_data (time_bought, time_sold, stock_names):
     dict_stocks = all_data()[1]
     my_data = {}
     for i in stock_names:
