@@ -7,6 +7,7 @@ To run our project:
 
 To run the application, make sure you are in the backend folder. Run the python file, server.py. 
 
+Here is the link to our submitted project on Devpost for the hackathon: https://devpost.com/software/athenahacks-project?ref_content=my-projects-tab&ref_feature=my_projects. 
 
 Github commands:
 
