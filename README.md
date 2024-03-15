@@ -1,12 +1,11 @@
-# AthenaHacks-24
-Run `pip install requirements.txt` to download dependencies for the backend. Set 
-up a virtual environment if desired: run `python -m venv venv` to create the
-virtual environment and then activate with `source venv/bin/activate` for Unix 
-and `venv\Scripts\activate` for Windows.
+# Financial Friend: Dr. Stox
+This is our project for 2024 AthenaHacks. 
 
-To run the application, make sure you are in the frontend folder.
-- Use `npm run start` to run the React frontend.
-- Use `npm run start-server` to run the Flask backend. 
+To run our project:
+1.) Create a virtual environment if desired by running `python -m venv venv`. Activate by running `source venv/bin/activate` for Unix and `venv\Scripts\activate` for Windows.
+2.) Run `pip install requirements.txt` to download dependencies for the project.
+
+To run the application, make sure you are in the backend folder. Run the python file, server.py. 
 
 Github commands:
 We'll be using pull, add, commit, and push as git commands.
