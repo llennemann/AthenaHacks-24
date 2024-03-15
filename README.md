@@ -1,5 +1,5 @@
 # Financial Friend: Dr. Stox
-This is our project for 2024 AthenaHacks. 
+This is our project for 2024 AthenaHacks: a stock simulator using generated stock data to help people, especially people who are financially illiterate, learn about finance in a fun and approachable way! We use Flask to render our HTML, CSS, and Javascript files. 
 
 To run our project:
 1.) Create a virtual environment if desired by running `python -m venv venv`. Activate by running `source venv/bin/activate` for Unix and `venv\Scripts\activate` for Windows.
